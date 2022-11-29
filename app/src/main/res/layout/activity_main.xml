@@ -127,4 +127,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/empty" />
 
+    <ImageView
+        android:id="@+id/resultView1"
+        android:layout_width="403dp"
+        android:layout_height="409dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/empty" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

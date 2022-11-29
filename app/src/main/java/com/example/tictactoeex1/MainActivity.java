@@ -2,19 +2,20 @@ package com.example.tictactoeex1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
     Button btnNewGame;
     ImageView img0,img1,img2,img3,img4,img5,img6,img7,img8;
     ImageView imgWinnerOrTurn;
+    ImageView resultView;
     boolean flag = true;
     int counter = 0;
     @Override
@@ -33,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
         img7 = findViewById(R.id.main_imageView7);
         img8 = findViewById(R.id.main_imageView8);
         imgWinnerOrTurn = findViewById(R.id.main_imageViewWinnerTurn);
+        resultView = findViewById(R.id.resultView1);
 
-        int[][] matrix = new int[3][3];
+        int[][] matrix =
+                {{-1, -1, -1}
+                ,{-1, -1, -1}
+                ,{-1, -1, -1}};
 
 
         btnNewGame.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -83,8 +90,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -107,8 +116,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -131,8 +142,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -154,8 +167,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -177,8 +192,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -200,8 +217,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -223,8 +242,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                   String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
@@ -238,27 +259,107 @@ public class MainActivity extends AppCompatActivity {
                     img8.setImageResource(R.drawable.x);
                     flag = false;
                     matrix[2][2] = 1;
+                    resultView.setImageResource(R.drawable.mark1);
                 }else {
                     imgWinnerOrTurn.setImageResource(R.drawable.xplay);
                     img8.setImageResource(R.drawable.o);
                     flag = true;
                     matrix[2][2] = 0;
+                    resultView.setImageResource(R.drawable.mark1);
+
                 }
                 counter++;
                 Log.i("MainActivity", print2D(matrix));
-                if (counter > 5)
-                    checkWinner(matrix);
+                if (counter > 5){
+                    String s =  checkWinner(matrix);
+                    Log.i("MainActivity", s);
+                    if(s != "noWinner"){
+//                        String result[] =  markWinner(s).split(",");
+//                       if(result[0].equals("xwin"))
+//                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+//                       if(result[0].equals("owin"))
+//                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+//                       switch(result[1]){
+//                           case("mark1"):
+//                               resultView.setImageResource(R.drawable.mark1);
+//
+//
+                       }
+                    }
                 if (counter == 9){
                     imgWinnerOrTurn.setImageResource(R.drawable.nowin);
                 }
 
             }
+
+
         });
     }
 
-    public int checkWinner(int[][] matrix) {
+    private String markWinner(String s) {
+        switch(s){
+            case "x0-1":
+                return "xwin,";
 
-        return 0;
+            case "x0-0":
+
+            case "x1-1":
+
+            case "x1-0":
+
+            case "x2-1":
+
+            case "x2-0":
+
+            case "y0-1":
+                return "xwin,mark3";
+
+            case "y0-0":
+
+            case "y1-1":
+
+            case "y1-0":
+
+            case "y2-1":
+
+            case "y2-0":
+
+        }
+        return "x";
+    }
+
+    public String checkWinner(int[][] matrix) {
+        int x0 = checkWinnerHelperHorizontal(0,matrix);
+        if(x0==1)
+            return "x0-1";
+        if(x0==0)
+            return "x0-0";
+        int x1 = checkWinnerHelperHorizontal(1,matrix);
+        if(x1==1)
+            return "x1-1";
+        if(x1==0)
+            return "x1-0";
+        int x2 = checkWinnerHelperHorizontal(2,matrix);
+        if(x2==1)
+            return "x2-1";
+        if(x2==0)
+            return "x2-0";
+        int y1 = checkWinnerHelperVertical(0,matrix);
+        if(y1==1)
+            return "y0-1";
+        if(y1==0)
+            return "y0-0";
+        int y2 = checkWinnerHelperVertical(1,matrix);
+        if(y2==1)
+            return "y1-1";
+        if(y2==0)
+            return "y1-0";
+        int y3 = checkWinnerHelperVertical(2,matrix);
+        if(y3==1)
+            return "y2-1";
+        if(y3==0)
+            return "y2-0";
+        return "noWinner";
     }
 
     public String print2D(int mat[][])
@@ -274,5 +375,37 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return matrix;
+    }
+
+    public int checkWinnerHelperHorizontal(int index, int[][] matrix){
+        int winCountX = 0;
+        int winCountO = 0;
+        for (int i = 0; i < 3; i++) {
+            if(matrix[index][i] == 1)
+                winCountX++;
+            if(matrix[index][i] == 0)
+                winCountO++;
+        }
+        if (winCountX == 3)
+            return 1;
+        if (winCountO == 3)
+            return 0;
+        return 2;
+    }
+
+    public int checkWinnerHelperVertical(int jndex, int[][] matrix){
+        int winCountX = 0;
+        int winCountO = 0;
+        for (int i = 0; i < 3; i++) {
+            if(matrix[i][jndex] == 1)
+                winCountX++;
+            if(matrix[i][jndex] == 0)
+                winCountO++;
+        }
+        if (winCountX == 3)
+            return 1;
+        if (winCountO == 3)
+            return 0;
+        return 2;
     }
 }
