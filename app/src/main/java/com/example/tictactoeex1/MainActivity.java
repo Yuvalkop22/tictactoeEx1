@@ -63,14 +63,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[0][0] = 0;
                 }
+                img0.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
             }
         });
@@ -88,14 +120,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[0][1] = 0;
                 }
+                img1.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
 
             }
@@ -114,14 +178,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[0][2] = 0;
                 }
+                img2.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
             }
         });
@@ -140,14 +236,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[1][0] = 0;
                 }
+                img3.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
             }
         });
@@ -165,14 +293,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[1][1] = 0;
                 }
+                img4.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
             }
         });
@@ -190,14 +350,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[1][2] = 0;
                 }
+                img5.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
             }
         });
@@ -215,14 +407,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[2][0] = 0;
                 }
+                img6.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
             }
         });
@@ -240,14 +464,46 @@ public class MainActivity extends AppCompatActivity {
                     flag = true;
                     matrix[2][1] = 0;
                 }
+                img7.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                   String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
+                    }
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
             }
         });
@@ -259,111 +515,140 @@ public class MainActivity extends AppCompatActivity {
                     img8.setImageResource(R.drawable.x);
                     flag = false;
                     matrix[2][2] = 1;
-                    resultView.setImageResource(R.drawable.mark1);
-                }else {
+                } else {
                     imgWinnerOrTurn.setImageResource(R.drawable.xplay);
                     img8.setImageResource(R.drawable.o);
                     flag = true;
                     matrix[2][2] = 0;
-                    resultView.setImageResource(R.drawable.mark1);
-
                 }
+                img8.setClickable(false);
                 counter++;
-                Log.i("MainActivity", print2D(matrix));
-                if (counter > 5){
-                    String s =  checkWinner(matrix);
-                    Log.i("MainActivity", s);
-                    if(s != "noWinner"){
-//                        String result[] =  markWinner(s).split(",");
-//                       if(result[0].equals("xwin"))
-//                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
-//                       if(result[0].equals("owin"))
-//                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
-//                       switch(result[1]){
-//                           case("mark1"):
-//                               resultView.setImageResource(R.drawable.mark1);
-//
-//
-                       }
+                if (counter >= 5) {
+                    String s = checkWinner(matrix);
+                    if (s != "noWinner") {
+                        String result[] = markWinner(s).split(",");
+                        if (result[0].equals("xwin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.xwin);
+                        if (result[0].equals("owin"))
+                            imgWinnerOrTurn.setImageResource(R.drawable.owin);
+                        switch (result[1]) {
+                            case ("mark1"):
+                                resultView.setImageResource(R.drawable.mark1);
+                                break;
+                            case ("mark2"):
+                                resultView.setImageResource(R.drawable.mark2);
+                                break;
+                            case ("mark3"):
+                                resultView.setImageResource(R.drawable.mark3);
+                                break;
+                            case ("mark4"):
+                                resultView.setImageResource(R.drawable.mark4);
+                                break;
+                            case ("mark5"):
+                                resultView.setImageResource(R.drawable.mark5);
+                                break;
+                            case ("mark6"):
+                                resultView.setImageResource(R.drawable.mark6);
+                                break;
+                            case ("mark7"):
+                                resultView.setImageResource(R.drawable.mark7);
+                                break;
+                            case ("mark8"):
+                                resultView.setImageResource(R.drawable.mark8);
+                                break;
+                        }
                     }
-                if (counter == 9){
-                    imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    if(counter == 9 && s == "noWinner"){
+                        imgWinnerOrTurn.setImageResource(R.drawable.nowin);
+                    }
                 }
-
             }
-
-
         });
     }
 
     private String markWinner(String s) {
-        switch(s){
+        switch (s) {
             case "x0-1":
-                return "xwin,";
-
+                return "xwin,mark6";
             case "x0-0":
-
+                return "owin,mark6";
             case "x1-1":
-
+                return "xwin,mark7";
             case "x1-0":
-
+                return "owin,mark7";
             case "x2-1":
-
+                return "xwin,mark8";
             case "x2-0":
-
+                return "owin,mark8";
             case "y0-1":
                 return "xwin,mark3";
-
             case "y0-0":
-
+                return "owin,mark3";
             case "y1-1":
-
+                return "xwin,mark4";
             case "y1-0":
-
+                return "owin,mark4";
             case "y2-1":
-
+                return "xwin,mark5";
             case "y2-0":
-
+                return "owin,mark5";
+            case "z1-1":
+                return"xwin,mark1";
+            case "z1-0":
+                return"owin,mark1";
+            case "z2-1":
+                return"xwin,mark2";
+            case "z2-0":
+                return"owin,mark2";
         }
         return "x";
     }
 
     public String checkWinner(int[][] matrix) {
         int x0 = checkWinnerHelperHorizontal(0,matrix);
-        if(x0==1)
-            return "x0-1";
-        if(x0==0)
-            return "x0-0";
+            if(x0==1)
+                return "x0-1";
+            if(x0==0)
+                return "x0-0";
         int x1 = checkWinnerHelperHorizontal(1,matrix);
-        if(x1==1)
-            return "x1-1";
-        if(x1==0)
-            return "x1-0";
+            if(x1==1)
+                return "x1-1";
+            if(x1==0)
+                return "x1-0";
         int x2 = checkWinnerHelperHorizontal(2,matrix);
-        if(x2==1)
-            return "x2-1";
-        if(x2==0)
-            return "x2-0";
+            if(x2==1)
+                return "x2-1";
+            if(x2==0)
+                return "x2-0";
         int y1 = checkWinnerHelperVertical(0,matrix);
-        if(y1==1)
-            return "y0-1";
-        if(y1==0)
-            return "y0-0";
+            if(y1==1)
+                return "y0-1";
+            if(y1==0)
+                return "y0-0";
         int y2 = checkWinnerHelperVertical(1,matrix);
-        if(y2==1)
-            return "y1-1";
-        if(y2==0)
-            return "y1-0";
+            if(y2==1)
+                return "y1-1";
+            if(y2==0)
+                return "y1-0";
         int y3 = checkWinnerHelperVertical(2,matrix);
-        if(y3==1)
-            return "y2-1";
-        if(y3==0)
-            return "y2-0";
+            if(y3==1)
+                return "y2-1";
+            if(y3==0)
+                return "y2-0";
+        int z1 = checkWinnerHelperDiagonalNormal(matrix);
+            if(z1 == 1)
+                return "z1-1";
+            if(z1 == 0)
+                return "z1-0";
+        int z2 = checkWinnerHelperDiagonalReverse(matrix);
+            if(z2 == 1)
+                return "z2-1";
+            if(z2 == 0)
+                return "z2-0";
         return "noWinner";
     }
 
-    public String print2D(int mat[][])
-    {
+    public String print2D(int mat[][]) {
         String matrix = "";
         // Loop through all rows
         for (int i = 0; i < mat.length; i++) {
@@ -400,6 +685,38 @@ public class MainActivity extends AppCompatActivity {
             if(matrix[i][jndex] == 1)
                 winCountX++;
             if(matrix[i][jndex] == 0)
+                winCountO++;
+        }
+        if (winCountX == 3)
+            return 1;
+        if (winCountO == 3)
+            return 0;
+        return 2;
+    }
+
+    public int checkWinnerHelperDiagonalNormal(int[][] matrix){
+        int winCountX = 0;
+        int winCountO = 0;
+        for (int i = 0; i < 3; i++) {
+            if(matrix[i][i] == 1)
+                winCountX++;
+            if(matrix[i][i] == 0)
+                winCountO++;
+        }
+        if (winCountX == 3)
+            return 1;
+        if (winCountO == 3)
+            return 0;
+        return 2;
+    }
+
+    public int checkWinnerHelperDiagonalReverse(int[][] matrix){
+        int winCountX = 0;
+        int winCountO = 0;
+        for (int i = 0; i < 3; i++) {
+            if(matrix[i][2-i] == 1)
+                winCountX++;
+            if(matrix[i][2-i] == 0)
                 winCountO++;
         }
         if (winCountX == 3)
